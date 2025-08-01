@@ -639,6 +639,25 @@
         font-weight: 600;
       }
 
+      /* Video styling to match query images */
+      .query-video {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        background: #000;
+      }
+
+      .query-video:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+        filter: brightness(1.02) saturate(1.05);
+      }
+
       /* ——— Scene switcher ——— */
       .scene-switcher {
         margin: 2rem 0;
@@ -960,6 +979,9 @@
             SceneSplat: Gaussian Splatting-based Scene Understanding with
             Vision-Language Pretraining
           </p>
+          <p
+            style="font-size: 1.5rem; color: #fe5141; margin: 0.25rem 0;"
+          > ICCV 2025 Oral  </p>
           <p>
             <strong style="vertical-align: middle">Links:</strong>
             <a
@@ -1344,9 +1366,25 @@
               </div>
             </div>
           </div>
+          
+          <!-- Text Query Video Demo -->
+          <div class="query-result-item">
+            <video
+              class="query-video"
+              controls
+              muted
+              playsinline
+              preload="auto"
+            >
+              <source src="media/text_query.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="query-caption">
+              <strong>Interactive scene query demo</strong>
+            </div>
+          </div>
 
-          <h3>Additional Segmentation Results</h3>
-
+        <h3>Additional Segmentation Results</h3>
           <div class="scene-query-results">
             <div class="query-result-item">
               <img
@@ -1356,7 +1394,6 @@
               />
             </div>
           </div>
-        </div>
 
         <div id="bibtex" class="section">
           <h2>Bibtex</h2>
